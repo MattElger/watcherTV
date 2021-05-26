@@ -3,7 +3,12 @@
 
 <head>
 <style>
-
+body {
+  background-image: url('space.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 .header {
   overflow: hidden;
@@ -50,6 +55,38 @@
   padding: 38px;
 }
 
+.title-text {
+  padding-top: 450px;
+  color: white;
+  font-size: 72px;
+  text-align: center;
+}
+
+.animation-shake {
+  position: relative;
+  animation-name: title-shake;
+  animation-duration: 5s;
+  animation-delay: 5s;
+  animation-iteration-count: 3;
+  animation-timing-function: ease-in;
+}
+
+@keyframes title-shake {
+
+  0%    {top:0px;}
+  10%   {top:5px;}
+  20%   {top:10px;}
+  30%   {top:15px;}
+  40%   {top:20px;}
+  50%   {top:25px;}
+  60%   {top:20px;}
+  70%   {top:15px;}
+  80%   {top:10px;}
+  90%   {top:5px;}
+  100%  {top:0px;}
+
+}
+
 </style>
 
 </head>
@@ -64,8 +101,10 @@
   </div>
 </div>
 
-<p>testtesttest</p>
-
+<div class="title-text">
+  <div class="animation-shake">
+    <img src = "title.png">
+  </div>
 </body>
 
 </html>
